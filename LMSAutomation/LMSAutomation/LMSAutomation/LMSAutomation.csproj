@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D568D2A9-3897-41E5-ABF1-01D017912F13}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LMSAutomation</RootNamespace>
+    <AssemblyName>LMSAutomation</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.9.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RelevantCodes.ExtentReports, Version=1.4.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExtentReports.2.41.0\lib\RelevantCodes.ExtentReports.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.7.0\lib\net45\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Selenium.Support.3.7.0\lib\net45\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseDriver.cs" />
+    <Compile Include="Pages\Categories\CreateCourseCategory.cs" />
+    <Compile Include="Pages\CourseConsumption\CourseInformation.cs" />
+    <Compile Include="Pages\CourseConsumption\CourseMainContent.cs" />
+    <Compile Include="Pages\CourseConsumption\Dashboard.cs" />
+    <Compile Include="Pages\CourseConsumption\ExploreCourses.cs" />
+    <Compile Include="Pages\CourseConsumption\MyCourses.cs" />
+    <Compile Include="Pages\Courses\Courses.cs" />
+    <Compile Include="Pages\Courses\CreateAssessment.cs" />
+    <Compile Include="Pages\Courses\CreateCourse.cs" />
+    <Compile Include="Pages\Courses\CreateQuiz.cs" />
+    <Compile Include="Pages\Courses\CreateSection.cs" />
+    <Compile Include="Pages\Courses\CreateSurvey.cs" />
+    <Compile Include="Pages\Courses\ImportQuestions.cs" />
+    <Compile Include="Pages\Courses\Module.cs" />
+    <Compile Include="Pages\Courses\PublishAssessment.cs" />
+    <Compile Include="Pages\Courses\PublishCourse.cs" />
+    <Compile Include="Pages\Courses\QuestionBank.cs" />
+    <Compile Include="Pages\Courses\UploadCaptivate.cs" />
+    <Compile Include="Pages\Courses\UploadContent.cs" />
+    <Compile Include="Pages\Courses\AddQuestion.cs" />
+    <Compile Include="Pages\Courses\AssessmentQuestions.cs" />
+    <Compile Include="Pages\Courses\Assignment.cs" />
+    <Compile Include="Pages\Courses\Badges.cs" />
+    <Compile Include="Pages\Courses\Certificates.cs" />
+    <Compile Include="Pages\Courses\CourseContent.cs" />
+    <Compile Include="Pages\Courses\CourseParticipants.cs" />
+    <Compile Include="Pages\LoginPage\Login.cs" />
+    <Compile Include="Pages\UserManagement\AccountSection.cs" />
+    <Compile Include="Pages\UserManagement\RegisterUser.cs" />
+    <Compile Include="Pages\UserManagement\Users.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\Categories\CreateCategoryTest.cs" />
+    <Compile Include="Tests\Courses\AddQuiz.cs" />
+    <Compile Include="Tests\CourseConsumption\CourseMainContentView.cs" />
+    <Compile Include="Tests\CourseConsumption\Dashboard.cs" />
+    <Compile Include="Tests\CourseConsumption\ExploreCourses.cs" />
+    <Compile Include="Tests\CourseConsumption\MyCourses.cs" />
+    <Compile Include="Tests\UserProfile\NewUser.cs" />
+    <Compile Include="Utility\FileUpload.cs" />
+    <Compile Include="Utility\Helper.cs" />
+    <Compile Include="Utility\ScreenShot.cs" />
+    <Compile Include="Tests\Courses\AddSurvey.cs" />
+    <Compile Include="Tests\Courses\CourseCreate.cs" />
+    <Compile Include="Tests\Courses\CourseParticipants.cs" />
+    <Compile Include="Tests\Courses\CoursesPage.cs" />
+    <Compile Include="Tests\Courses\CreateAssessment.cs" />
+    <Compile Include="Tests\Courses\CreateAssignment.cs" />
+    <Compile Include="Tests\Courses\CreateModule.cs" />
+    <Compile Include="Tests\Courses\QuestionBank.cs" />
+    <Compile Include="Tests\Courses\UploadCaptivateTest.cs" />
+    <Compile Include="Tests\Courses\UploadContent.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Data\AcheterBudgetData.xlsx" />
+    <None Include="Data\AllDocs\basic_in_education.pdf" />
+    <None Include="Data\AllDocs\index - Copy.exif" />
+    <None Include="Data\AllDocs\peace.zip" />
+    <None Include="Data\AllDocs\qqqqq.rar" />
+    <None Include="Data\AllDocs\Question1.doc" />
+    <None Include="Data\AllDocs\Question1.docx" />
+    <None Include="Data\AllDocs\SamplePPTFile_500kb - Copy.ppt" />
+    <None Include="Data\AllDocs\SamplePPTFile_500kb - Copy.pptx" />
+    <None Include="Data\AllDocs\Testing_Tool_Comparison.xls" />
+    <None Include="Data\AllDocs\Testing_Tool_Comparison.xlsx" />
+    <None Include="Data\property.ini" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Log\" />
+    <Folder Include="ScreenShots\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BrowserDrivers\chromedriver.exe" />
+    <Content Include="BrowserDrivers\geckodriver.exe" />
+    <Content Include="BrowserDrivers\IEDriverServer.exe" />
+    <Content Include="Data\AllDocs\FLAG_B24.BMP" />
+    <Content Include="Data\AllDocs\FLAG_T24.TIF" />
+    <Content Include="Data\AllDocs\hard_working_on_computer_anim_md_wm_v2.gif" />
+    <Content Include="Data\AllDocs\index - Copy.jpeg" />
+    <Content Include="Data\AllDocs\index.jpg" />
+    <Content Include="Data\AllDocs\MobileCompatible.PNG" />
+    <Content Include="Data\AllDocs\SampleVideo_360x240_5mb.mp4" />
+    <Content Include="Extent-Config.xml" />
+    <Content Include="Reports\extent.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
